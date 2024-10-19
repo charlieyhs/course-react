@@ -28,9 +28,42 @@
 }
 
 .ch-followCard-button {
+    cursor: pointer;
     margin-left: 16px;
     border: 0;
     border-radius: 999px;
     padding: 6px 16px;
     font-weight: bold;
+    border: 1px solid #000;
+    transition: .3s ease background-color;
+}
+.ch-followCard-button.is-following{
+    border: 1px solid #bbb;
+    background: transparent;
+    color: #fff;
+    width: 140px;
+}
+.ch-followCard-button:hover {
+    opacity: .8;
+}
+
+.ch-followCard-text {
+    display: block;
+}
+
+.ch-followCard-button.is-following:hover {
+    background-color: rgb(255, 0, 0,0.178);
+    color: red;
+    border: 1px solid red;
+    transition: .3s ease all;
+}
+.ch-followCard-button.is-following:hover .ch-followCard-text{
+    display: none;
+}
+.ch-followCard-button.is-following:hover .ch-followCard-stopFollow{
+    display: block;
+}
+
+.ch-followCard-stopFollow{
+    display: none;
 }
